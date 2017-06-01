@@ -14,12 +14,15 @@ $app->post('/api/GoogleGeocodingAPI/coordinatesToAddress', function ($request, $
     if(empty($post_data['args']['apiKey'])) {
         $error[] = 'apiKey';
     }
-    if(empty($post_data['args']['latitude'])) {
-        $error[] = 'latitude';
+
+    if(!empty($post_data['args']['latitude']) && !empty($post_data['args']['longitude'])){
+        $post_data['args']['coordinates'] =  $post_data['args']['latitude'] . ',' . $post_data['args']['longitude'];
     }
-    if(empty($post_data['args']['longitude'])) {
-        $error[] = 'longitude';
+
+    if(empty($post_data['args']['coordinates'])) {
+        $error[] = 'coordinates';
     }
+
     
     if(!empty($error)) {
         $result['callback'] = 'error';
@@ -31,8 +34,8 @@ $app->post('/api/GoogleGeocodingAPI/coordinatesToAddress', function ($request, $
     
     
     $query['key'] = $post_data['args']['apiKey'];
-    $query['latlng'] = $post_data['args']['latitude'] . ',' . $post_data['args']['longitude'];
-    
+    $query['latlng'] = $post_data['args']['coordinates'];
+
     $query_str = 'https://maps.googleapis.com/maps/api/geocode/json';
     
     $client = $this->httpClient;

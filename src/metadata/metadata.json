@@ -86,15 +86,9 @@
                     "required": true
                 },
                 {
-                    "name": "latitude",
+                    "name": "coordinates",
                     "type": "String",
-                    "info": "The latitude find the place",
-                    "required": true
-                },
-                {
-                    "name": "longitude",
-                    "type": "String",
-                    "info": "The longitude find the place",
+                    "info": "The latitude and longitude of the find place",
                     "required": true
                 }
             ],
