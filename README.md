@@ -13,6 +13,16 @@ Geocode and reverse geocode any address or region.
 3. In the sidebar on the left, select **Credentials**.
 4. If your project has no API key for the server, create it now - **Add credentials > API key > Server key**;
 
+## Custom datatypes:
+ |Datatype|Description|Example
+ |--------|-----------|----------
+ |Datepicker|String which includes date and time|```2016-05-28 00:00:00```
+ |Map|String which includes latitude and longitude coma separated|```50.37, 26.56```
+ |List|Simple array|```["123", "sample"]```
+ |Select|String with predefined values|```sample```
+ |Array|Array of objects|```[{"Second name":"123","Age":"12","Photo":"sdf","Draft":"sdfsdf"},{"name":"adi","Second name":"bla","Age":"4","Photo":"asfserwe","Draft":"sdfsdf"}] ```
+
+
 
 ## GoogleGeocodingAPI.addressToCoordinates
 Convert a free form address to a set of coordinates (latitude, longitude).
@@ -38,7 +48,7 @@ Convert a location's coordinates on the map to an address string.
 | Field    | Type  | Description
 |----------|-------|----------
 | apiKey  | credentials| The API key obtained from Google APIs.
-| latitude | String| The latitude find the place
-| longitude| String| The longitude find the place
+| coordinates | Map| The latitude and longitude of the find place
+
 
 

@@ -87,7 +87,7 @@
                 },
                 {
                     "name": "coordinates",
-                    "type": "String",
+                    "type": "Map",
                     "info": "The latitude and longitude of the find place",
                     "required": true
                 }
