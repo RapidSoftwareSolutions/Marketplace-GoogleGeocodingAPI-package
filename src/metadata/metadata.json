@@ -36,10 +36,6 @@
                 {
                     "name":"success",
                     "info": "Success"
-                },
-                {
-                    "name":"addressNotFound",
-                    "info": "Address not found"
                 }
             ]
         },
@@ -68,10 +64,6 @@
                 {
                     "name":"success",
                     "info": "Success"
-                },
-                {
-                    "name":"addressNotFound",
-                    "info": "Address not found"
                 }
             ]
         },
